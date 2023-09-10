@@ -13,6 +13,8 @@ public class Main {
 		System.out.println("Choice: ");
 	}
 	public static void main(String[] args) {
+		
+		
 		Scanner sc = new Scanner(System.in);
 		List<Student> studentRecord = new ArrayList<Student>();
 		List<Staff> staffRecord = new ArrayList<Staff>();
@@ -43,6 +45,7 @@ public class Main {
 	}
 	
 	public static void createStudent(List<Book> books) {
+		int option = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter name: ");
 		String name = sc.nextLine();
@@ -59,6 +62,7 @@ public class Main {
 			for (int i=0; i<books.size(); i++) {
 				System.out.println((i+1) + ". "+ books.get(i));
 			}
+			option = sc.nextInt();
 		}
 		else {
 			System.out.println("No books");
@@ -66,7 +70,8 @@ public class Main {
 			sc.next();
 			return;
 		}
-		
+//		books.get(option-1);
+		Student s = new Student(/*name, address, year, program, fee, books*/);
 		
 	}
 	public static void createStaff() {
